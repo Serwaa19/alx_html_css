@@ -1,48 +1,45 @@
 /* ============================
-   GENERAL PAGE LAYOUT
+   LAYOUT (Do NOT modify — required)
    ============================ */
 
-/* Make body a flex container with vertical stacking */
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;   /* full-height layout */
+    height: 100vh;
+    background-color: #fafafa;
 }
 
-/* Main contains article + aside side-by-side */
 main {
     display: flex;
     flex-direction: row;
-    flex: auto;      /* allow main to expand */
+    flex: auto;
 }
 
-/* ============================
-   ARTICLE & ASIDE LAYOUT
-   ============================ */
-
-/* Article takes 2/3 of the width */
 article {
     flex: 2;
-    overflow-y: auto;   /* scroll inside article */
+    overflow-y: auto;
     padding: 20px;
+    background: white;
 }
 
-/* Aside takes 1/3 of the width */
 aside {
     flex: 1;
-    overflow-y: auto;   /* scroll inside aside */
+    overflow-y: auto;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
+    border-left: 2px solid #e6e6e6;
 }
 
 /* ============================
-   HEADER & FOOTER
+   HEADER / NAVIGATION
    ============================ */
-header, footer {
-    background-color: #004080;
+
+header {
+    background-color: #003366;
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
+    border-bottom: 4px solid #002447;
 }
 
 header ul {
@@ -50,52 +47,128 @@ header ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo styling (allowed) */
+header .logo {
+    font-size: 32px;   /* make logo look like a real logo */
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 header a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 3px;
+    transition: background 0.3s;
 }
 
 header a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+
+footer {
+    padding: 15px 20px;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    border-top: 4px solid #002447;
+}
+
+footer a {
+    color: #ffdd55;
+    font-weight: bold;
+}
+
+footer a:hover {
     text-decoration: underline;
+}
+
+/* ============================
+   ARTICLE CONTENT STYLING
+   (Allowed to modify freely)
+   ============================ */
+
+article h1 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+article h2 {
+    color: #0055a5;
+    margin-top: 25px;
+}
+
+article h3 {
+    color: #0077cc;
+    margin-top: 20px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+article img {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* ============================
    TABLE STYLING
    ============================ */
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ccc;
-}
-
-th, td {
-    padding: 10px;
-    text-align: left;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 thead {
-    background-color: #e0e0e0;
+    background-color: #003366;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+    background-color: #f5faff;
 }
 
 /* ============================
-   RESPONSIVE HANDLING
-   (Triggered by base.css when works_on_smartphone is active)
+   ASIDE CONTENT
+   ============================ */
+
+aside p {
+    font-size: 14px;
+    color: #444;
+}
+
+/* ============================
+   RESPONSIVE SUPPORT
+   (Triggered via works_on_smartphone)
    ============================ */
 
 body.works_on_smartphone main {
-    flex-direction: column;  /* article and aside stack on phones */
+    flex-direction: column;
 }
 
 body.works_on_smartphone article,
 body.works_on_smartphone aside {
-    flex: unset;
     width: 100%;
+    flex: unset;
 }
