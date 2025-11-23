@@ -1,1 +1,2 @@
 # alx_html_css
+This project is a simple, responsive webpage built using HTML5 and CSS Flexbox. It demonstrates proper page structure, semantic tags, basic styling, and mobile responsiveness. It follows all requirements of the assignment, including layout rules and mobile-friendly behavior.
