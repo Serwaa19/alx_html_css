@@ -1,35 +1,101 @@
-/* Make <body> a flex container with vertical stacking */
+/* ============================
+   GENERAL PAGE LAYOUT
+   ============================ */
+
+/* Make body a flex container with vertical stacking */
 body {
     display: flex;
-    flex-direction: column;   /* header, main, footer stacked vertically */
+    flex-direction: column;
     margin: 0;
-    height: 100vh;            /* full viewport height */
+    height: 100vh;   /* full-height layout */
 }
 
-/* Make <main> a flex container with horizontal layout */
+/* Main contains article + aside side-by-side */
 main {
     display: flex;
-    flex-direction: row;      /* article and aside side-by-side */
-    flex: auto;               /* main grows automatically */
+    flex-direction: row;
+    flex: auto;      /* allow main to expand */
 }
 
-/* Article occupies 2/3 of the width */
+/* ============================
+   ARTICLE & ASIDE LAYOUT
+   ============================ */
+
+/* Article takes 2/3 of the width */
 article {
-    flex: 2;                  /* takes up 2 parts */
-    overflow-y: auto;         /* enables vertical scroll */
+    flex: 2;
+    overflow-y: auto;   /* scroll inside article */
     padding: 20px;
 }
 
-/* Aside occupies 1/3 of the width */
+/* Aside takes 1/3 of the width */
 aside {
-    flex: 1;                  /* takes up 1 part */
-    overflow-y: auto;         /* enables vertical scroll */
+    flex: 1;
+    overflow-y: auto;   /* scroll inside aside */
     padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Optional styling for header and footer */
+/* ============================
+   HEADER & FOOTER
+   ============================ */
 header, footer {
-    padding: 20px;
     background-color: #004080;
     color: white;
+    padding: 20px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   TABLE STYLING
+   ============================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #e0e0e0;
+}
+
+/* ============================
+   RESPONSIVE HANDLING
+   (Triggered by base.css when works_on_smartphone is active)
+   ============================ */
+
+body.works_on_smartphone main {
+    flex-direction: column;  /* article and aside stack on phones */
+}
+
+body.works_on_smartphone article,
+body.works_on_smartphone aside {
+    flex: unset;
+    width: 100%;
 }
