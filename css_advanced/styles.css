@@ -845,7 +845,7 @@ header nav ul li a {
 main section:first-child {
     position: relative;
     min-height: 100vh;
-    background-color: #625967;
+    background-color: #979797;
     background-image: url('Images/Object.png');
     background-size: cover;
     background-position: center;
