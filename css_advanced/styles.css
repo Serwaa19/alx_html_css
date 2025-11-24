@@ -1211,3 +1211,295 @@ section:nth-of-type(4) button {
 section:nth-of-type(4) button:hover {
     background-color: #a33cd1;
 }
+/* --------------------
+    F.A.Q SECTION
+---------------------*/
+
+section.faq {
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+section.faq h2 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+/* FAQ GRID */
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 80px;
+    text-align: left;
+}
+
+/* Each item */
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Optional subtle fade effect */
+.faq-item {
+    transition: 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    transform: translateY(-4px);
+}
+
+/* --------------------
+        FOOTER
+---------------------*/
+.footer {
+    background-color: #0b1b34; /* dark navy */
+    color: white;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-content {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    width: 35px;
+}
+
+.footer-brand {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-right i {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-right i:hover {
+    transform: scale(1.2);
+}
+
+.footer-copy {
+    margin-top: 25px;
+    color: #b9c0ce;
+    font-size: 14px;
+}
+.footer-copy a {
+    color: #b9c0ce;
+    text-decoration: none;
+    font-weight: 600;
+}
+.footer-copy a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Global ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+/* ---------- Top Purple Bar ---------- */
+.top-bar {
+  height: 16px;
+  background: #c38bfc;
+  width: 100%;
+}
+
+/* ---------- Section Title ---------- */
+.section-title {
+  text-align: center;
+  margin: 50px 0 40px 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.section-title span {
+  color: #b155ff;
+  font-weight: 600;
+}
+
+/* ---------- Tutorial Grid ---------- */
+.tutorial-grid {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+/* ---------- Tutorial Card ---------- */
+.tutorial-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  padding-bottom: 20px;
+  transition: transform .2s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------- Thumbnail ---------- */
+.thumbnail-container {
+  position: relative;
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ---------- Play Button ---------- */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffffcc;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn svg {
+  width: 20px;
+  fill: #b155ff;
+}
+
+/* ---------- Card Content ---------- */
+.card-content {
+  padding: 18px 15px 0 15px;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.card-desc {
+  color: #828282;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+/* ---------- Instructor Area ---------- */
+.instructor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instructor-left {
+  display: flex;
+  align-items: center;
+}
+
+.instructor-left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.instructor-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ---------- Rating ---------- */
+.stars {
+  color: #b155ff;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ---------- Duration ---------- */
+.duration {
+  margin-top: 6px;
+  color: #8c8c8c;
+  font-size: 13px;
+  text-align: right;
+}
+
+/* ---------- Bottom Dark Bar ---------- */
+.bottom-bar {
+  height: 20px;
+  background: #0d1b2a;
+  width: 100%;
+  margin-top: 60px;
+}
+:root {
+    /* Colors */
+    --primary: #8B5CF6;
+    --primary-light: #A78BFA;
+    --primary-dark: #7C3AED;
+    --background: #F9FAFB;
+    --sidebar-bg: #FFFFFF;
+    --border: #E5E7EB;
+    --border-light: #F3F4F6;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    
+    /* Statistic Colors */
+    --stat-total: #E0E7FF;
+    --stat-total-text: #3730A3;
+    --stat-completed: #D1FAE5;
+    --stat-completed-text: #065F46;
+    
+    /* Tag Colors */
+    --priority-high: #FECACA;
+    --priority-high-text: #991B1B;
+    --priority-medium: #FEF3C7;
+    --priority-medium-text: #92400E;
+    --priority-low: #DBEAFE;
+    --priority-low-text: #1E40AF;
+    
+    --category-work: #C7D2FE;
+    --category-work-text: #3730A3;
+    --category-personal: #FDE68A;
+    --category-personal-text: #92400E;
+    --category-shopping: #FBCFE8;
+    --category-shopping-text: #9D174D;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);  
+}
